@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart Home Control Dashboard</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Home Dashboard</h1>
+    <button id="theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main>
+    <section class="dashboard-section" id="bedroom">
+      <h2><i class="fas fa-bed"></i> Bedroom</h2>
+      <div class="device-card">
+        <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+        <p>Status: <span class="status" id="bedroom-light-status">OFF</span></p>
+        <button class="toggle-btn" data-target="bedroom-light">Turn ON</button>
+      </div>
+      <div class="device-card">
+        <h3><i class="fas fa-thermometer-half"></i> Thermostat</h3>
+        <p>Temperature: <span id="bedroom-temp-display">22°C</span></p>
+        <input type="range" min="10" max="30" value="22" class="temp-slider" data-target="bedroom-temp" />
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="kitchen">
+      <h2><i class="fas fa-utensils"></i> Kitchen</h2>
+      <div class="device-card">
+        <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+        <p>Status: <span class="status" id="kitchen-light-status">OFF</span></p>
+        <button class="toggle-btn" data-target="kitchen-light">Turn ON</button>
+      </div>
+      <div class="device-card">
+        <h3><i class="fas fa-video"></i> Security Camera</h3>
+        <p>Status: <span class="status" id="kitchen-camera-status">Inactive</span></p>
+        <button class="toggle-btn" data-target="kitchen-camera">Activate</button>
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="bathroom">
+      <h2><i class="fas fa-bath"></i> Bathroom</h2>
+      <div class="device-card">
+        <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+        <p>Status: <span class="status" id="bathroom-light-status">OFF</span></p>
+        <button class="toggle-btn" data-target="bathroom-light">Turn ON</button>
+      </div>
+      <div class="device-card">
+        <h3><i class="fas fa-thermometer-half"></i> Thermostat</h3>
+        <p>Temperature: <span id="bathroom-temp-display">22°C</span></p>
+        <input type="range" min="10" max="30" value="22" class="temp-slider" data-target="bathroom-temp" />
+      </div>
+    </section>
+
+    <section class="dashboard-section" id="balcony">
+      <h2><i class="fas fa-tree"></i> Balcony</h2>
+      <div class="device-card">
+        <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+        <p>Status: <span class="status" id="balcony-light-status">OFF</span></p>
+        <button class="toggle-btn" data-target="balcony-light">Turn ON</button>
+      </div>
+      <div class="device-card">
+        <h3><i class="fas fa-video"></i> Security Camera</h3>
+        <p>Status: <span class="status" id="balcony-camera-status">Inactive</span></p>
+        <button class="toggle-btn" data-target="balcony-camera">Activate</button>
+      </div>
+    </section>
+
+<!-- Add these two sections inside <main>, after Balcony -->
+
+    <section class="dashboard-section" id="hall">
+        <h2><i class="fas fa-couch"></i> Hall</h2>
+        <div class="device-card">
+          <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+          <p>Status: <span class="status" id="hall-light-status">OFF</span></p>
+          <button class="toggle-btn" data-target="hall-light">Turn ON</button>
+        </div>
+        <div class="device-card">
+          <h3><i class="fas fa-video"></i> Security Camera</h3>
+          <p>Status: <span class="status" id="hall-camera-status">Inactive</span></p>
+          <button class="toggle-btn" data-target="hall-camera">Activate</button>
+        </div>
+      </section>
+      
+      <section class="dashboard-section" id="veranda">
+        <h2><i class="fas fa-umbrella-beach"></i> Veranda</h2>
+        <div class="device-card">
+          <h3><i class="fas fa-lightbulb"></i> Lights</h3>
+          <p>Status: <span class="status" id="veranda-light-status">OFF</span></p>
+          <button class="toggle-btn" data-target="veranda-light">Turn ON</button>
+        </div>
+        <div class="device-card">
+          <h3><i class="fas fa-video"></i> Security Camera</h3>
+          <p>Status: <span class="status" id="veranda-camera-status">Inactive</span></p>
+          <button class="toggle-btn" data-target="veranda-camera">Activate</button>
+        </div>
+      </section>
+      
+
+
+    <section class="dashboard-section clock-section">
+      <h2><i class="fas fa-clock"></i> Current Time</h2>
+      <p id="clock" class="clock"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed for your comfort and convenience</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
